@@ -1,0 +1,3061 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 88px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  color: #ffffff;
+}
+
+.logo {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+
+  font-size: 0.88rem;
+}
+
+.nav-links a {
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+.nav-button {
+  padding: 0.8rem 1.35rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.nav-button:hover {
+  background: #ffffff;
+  color: #123b45;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 140px 8% 100px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 38, 44, 0.78),
+      rgba(10, 38, 44, 0.35),
+      rgba(10, 38, 44, 0.05)
+    ),
+    url("https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86") center /
+      cover no-repeat;
+
+  color: #ffffff;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero-eyebrow {
+  margin: 0 0 1.2rem;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.hero h1 span {
+  display: block;
+  font-style: italic;
+}
+
+.hero-description {
+  max-width: 520px;
+
+  margin: 2rem 0;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+  padding: 0 1.5rem;
+
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.primary-button {
+  background: #ffffff;
+  color: #123b45;
+}
+
+.secondary-button {
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  color: #ffffff;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  transform: translateY(-2px);
+}
+
+.secondary-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   DESTINATIONS
+========================= */
+
+.destinations {
+  padding: 110px 6%;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 45px;
+}
+
+.section-heading p {
+  margin: 0 0 0.8rem;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+
+  color: #788879;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* =========================
+   DESTINATION GRID
+========================= */
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.destination-card:first-child {
+  grid-column: span 2;
+}
+
+.destination-card:last-child {
+  grid-column: span 2;
+}
+
+.destination-image {
+  position: relative;
+
+  min-height: 420px;
+
+  display: flex;
+  align-items: flex-end;
+
+  border-radius: 4px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
+  transition: transform 0.4s ease;
+}
+
+.destination-card {
+  overflow: hidden;
+}
+
+.destination-card:hover .destination-image {
+  transform: scale(1.025);
+}
+
+/* =========================
+   DESTINATION OVERLAY
+========================= */
+
+.destination-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 28px;
+
+  background: linear-gradient(transparent 35%, rgba(0, 0, 0, 0.72));
+
+  color: #ffffff;
+}
+
+.destination-overlay p {
+  margin: 0 0 6px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  opacity: 0.8;
+}
+
+.destination-overlay h3 {
+  margin: 0 0 12px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.destination-overlay span {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .navbar {
+    height: 75px;
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-button {
+    padding: 0.7rem 1.1rem;
+  }
+
+  .hero {
+    min-height: 88vh;
+    padding: 120px 6% 80px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+
+    max-width: 280px;
+  }
+
+  .destinations {
+    padding: 80px 5%;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-card:first-child,
+  .destination-card:last-child {
+    grid-column: auto;
+  }
+
+  .destination-image {
+    min-height: 360px;
+  }
+
+  .destination-overlay {
+    padding: 22px;
+  }
+
+  .destination-overlay h3 {
+    font-size: 2rem;
+  }
+}
+/* =========================
+   RESORTS
+========================= */
+
+.resorts {
+  padding: 110px 6%;
+  background: #ffffff;
+  padding: 80px 5%;
+}
+
+.resorts-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-direction: column;
+  margin-bottom: 45px;
+}
+
+.resorts-header .section-heading {
+  margin-bottom: 0;
+}
+
+.view-all {
+  flex-shrink: 0;
+
+  padding-bottom: 8px;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  border-bottom: 1px solid #123b45;
+}
+
+.resort-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* =========================
+   RESORT CARD
+========================= */
+
+.resort-card {
+  min-width: 0;
+}
+
+.resort-image {
+  position: relative;
+
+  height: 308px;
+
+  border-radius: 5px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
+  transition: transform 0.4s ease;
+}
+
+.resort-card:hover .resort-image {
+  transform: translateY(-5px);
+}
+
+.resort-category {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  font-size: 1.25rem;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.favorite-button:hover {
+  transform: scale(1.08);
+  background: #ffffff;
+}
+
+.resort-info {
+  padding: 18px 2px 0;
+}
+
+.resort-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.resort-heading h3 {
+  margin: 0 0 6px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.resort-heading p {
+  margin: 0;
+
+  font-size: 0.82rem;
+
+  color: #788879;
+}
+
+.resort-rating {
+  flex-shrink: 0;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.resort-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 18px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #e8e3da;
+}
+
+.resort-bottom > span {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.view-resort {
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #123b45;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+/* =========================
+   RESORT DETAILS
+========================= */
+
+.resort-details {
+  min-height: 100vh;
+  background: #faf8f3;
+}
+
+.resort-details-hero {
+  min-height: 72vh;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.resort-details-overlay {
+  min-height: 72vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 120px 7% 70px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.05) 35%,
+    rgba(0, 0, 0, 0.75)
+  );
+}
+
+.back-link {
+  width: fit-content;
+
+  font-size: 0.85rem;
+
+  transition: opacity 0.3s ease;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+.resort-details-heading p {
+  margin: 0 0 10px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.resort-details-heading h1 {
+  margin: 0 0 14px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.resort-details-heading span {
+  font-size: 0.9rem;
+}
+
+.resort-details-content {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 80px;
+
+  padding: 100px 7%;
+}
+
+.resort-main-info {
+  max-width: 720px;
+}
+
+.details-eyebrow {
+  margin: 0 0 15px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color: #788879;
+}
+
+.resort-main-info h2 {
+  margin: 0 0 25px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.details-description {
+  margin: 0;
+
+  max-width: 650px;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: #53666a;
+}
+
+.resort-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+
+  margin-top: 40px;
+}
+
+.feature-item {
+  padding: 17px;
+
+  border: 1px solid #e5e0d7;
+
+  background: #ffffff;
+
+  font-size: 0.85rem;
+}
+
+.feature-item span {
+  margin-right: 8px;
+
+  font-weight: 700;
+}
+
+.resort-booking-card {
+  align-self: start;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e8e3da;
+
+  box-shadow: 0 15px 50px rgba(18, 59, 69, 0.06);
+}
+
+.resort-booking-card > p {
+  margin: 0 0 15px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  color: #788879;
+}
+
+.resort-booking-card h3 {
+  margin: 0 0 10px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.resort-booking-card > span {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-size: 0.85rem;
+
+  color: #788879;
+}
+
+.booking-button {
+  width: 100%;
+
+  min-height: 52px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #123b45;
+  color: #ffffff;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+}
+
+.booking-button:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   NOT FOUND
+========================= */
+
+.not-found {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  text-align: center;
+}
+
+.not-found h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.not-found p {
+  margin-bottom: 30px;
+}
+
+/* =========================
+   DETAILS MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .resort-details-hero,
+  .resort-details-overlay {
+    min-height: 75vh;
+  }
+
+  .resort-details-overlay {
+    padding: 100px 6% 50px;
+  }
+
+  .resort-details-heading h1 {
+    font-size: clamp(2.8rem, 13vw, 5rem);
+  }
+
+  .resort-details-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+
+    padding: 75px 6%;
+  }
+
+  .resort-features {
+    grid-template-columns: 1fr;
+  }
+
+  .resort-booking-card {
+    width: 100%;
+  }
+}
+
+/* =========================
+   SEARCH SECTION
+========================= */
+
+.search-section {
+  position: relative;
+  z-index: 3;
+
+  margin-top: -55px;
+
+  padding: 0 6%;
+}
+
+.search-container {
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 42px;
+
+  background: #ffffff;
+
+  box-shadow: 0 20px 60px rgba(18, 59, 69, 0.12);
+}
+
+.search-heading {
+  margin-bottom: 25px;
+}
+
+.search-heading p {
+  margin: 0 0 8px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color: #788879;
+}
+
+.search-heading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.search-heading h2 span {
+  font-style: italic;
+}
+
+.search-bar {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr auto;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 8px;
+
+  border: 1px solid #e3dfd6;
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  padding: 8px 14px;
+}
+
+.search-field label {
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #788879;
+}
+
+.search-field select {
+  width: 100%;
+
+  padding: 4px 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #123b45;
+
+  font-size: 0.95rem;
+
+  cursor: pointer;
+}
+
+.search-divider {
+  width: 1px;
+  height: 45px;
+
+  background: #e3dfd6;
+}
+
+.search-button {
+  min-height: 58px;
+
+  padding: 0 30px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #123b45;
+  color: #ffffff;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+  background: #1b5360;
+}
+
+/* =========================
+   SEARCH RESULTS
+========================= */
+
+.search-results {
+  min-height: 100vh;
+
+  padding: 120px 6% 100px;
+
+  background: #faf8f3;
+}
+
+.search-results-header {
+  max-width: 900px;
+
+  margin: 0 auto 60px;
+}
+
+.results-back {
+  display: inline-block;
+
+  margin-bottom: 60px;
+
+  font-size: 0.85rem;
+}
+
+.search-results-header > p {
+  margin: 0 0 12px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color: #788879;
+}
+
+.search-results-header h1 {
+  margin: 0 0 15px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.search-results-header > span {
+  font-size: 0.85rem;
+
+  color: #788879;
+}
+
+.results-grid {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.result-card {
+  background: #ffffff;
+
+  overflow: hidden;
+
+  border: 1px solid #ebe6dd;
+}
+
+.result-image {
+  height: 300px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.result-info {
+  padding: 25px;
+}
+
+.result-info > p {
+  margin: 0 0 8px;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #788879;
+}
+
+.result-info h2 {
+  margin: 0 0 8px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.result-info > span {
+  font-size: 0.82rem;
+
+  color: #788879;
+}
+
+.result-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 25px;
+  padding-top: 18px;
+
+  border-top: 1px solid #ebe6dd;
+}
+
+.result-bottom span {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.result-bottom a {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+
+  padding: 100px 20px;
+
+  text-align: center;
+}
+
+.no-results h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.no-results p {
+  margin-bottom: 30px;
+
+  color: #788879;
+}
+
+/* =========================
+   SEARCH MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .search-section {
+    margin-top: -35px;
+    padding: 0 5%;
+  }
+
+  .search-container {
+    padding: 28px 20px;
+  }
+
+  .search-heading h2 {
+    font-size: 2rem;
+  }
+
+  .search-bar {
+    grid-template-columns: 1fr;
+
+    gap: 5px;
+
+    padding: 10px;
+  }
+
+  .search-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .search-results {
+    padding: 100px 5% 70px;
+  }
+
+  .results-back {
+    margin-bottom: 45px;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-results-header h1 {
+    font-size: 3rem;
+  }
+}
+
+/* =========================
+   EXPERIENCES
+========================= */
+
+.experiences {
+  padding: 120px 6%;
+
+  background: #f2f0e9;
+}
+
+.experiences-header {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+
+  align-items: end;
+
+  gap: 60px;
+
+  margin-bottom: 50px;
+}
+
+.experiences-header .section-heading {
+  margin-bottom: 0;
+}
+
+.experiences-header .section-heading h2 span {
+  font-style: italic;
+}
+
+.experiences-intro {
+  margin: 0;
+
+  font-size: 0.95rem;
+  line-height: 1.8;
+
+  color: #637277;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.experience-card {
+  overflow: hidden;
+}
+
+.experience-image {
+  position: relative;
+
+  min-height: 500px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transition: transform 0.5s ease;
+}
+
+.experience-card:hover .experience-image {
+  transform: scale(1.025);
+}
+
+.experience-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 28px;
+
+  color: #ffffff;
+
+  background: linear-gradient(transparent 25%, rgba(0, 0, 0, 0.78));
+}
+
+.experience-overlay p {
+  margin: 0 0 8px;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  opacity: 0.8;
+}
+
+.experience-overlay h3 {
+  margin: 0 0 5px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.experience-overlay span {
+  margin-bottom: 18px;
+
+  font-size: 0.8rem;
+
+  opacity: 0.85;
+}
+
+.experience-overlay a {
+  width: fit-content;
+
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* =========================
+   EXPERIENCES MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .experiences {
+    padding: 80px 5%;
+  }
+
+  .experiences-header {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 35px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-image {
+    min-height: 400px;
+  }
+}
+
+/* =========================
+   TRAVEL GUIDES
+========================= */
+
+.guides {
+  padding: 120px 6%;
+
+  background: #faf8f3;
+}
+
+.guides-header {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+
+  align-items: end;
+
+  gap: 60px;
+
+  margin-bottom: 50px;
+}
+
+.guides-header .section-heading {
+  margin-bottom: 0;
+}
+
+.guides-header .section-heading h2 span {
+  font-style: italic;
+}
+
+.guides-intro {
+  margin: 0;
+
+  font-size: 0.95rem;
+  line-height: 1.8;
+
+  color: #637277;
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+.guide-card {
+  background: #ffffff;
+
+  border: 1px solid #ebe6dd;
+
+  overflow: hidden;
+}
+
+.guide-image {
+  height: 300px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transition: transform 0.5s ease;
+}
+
+.guide-card:hover .guide-image {
+  transform: scale(1.035);
+}
+
+.guide-info {
+  padding: 25px;
+}
+
+.guide-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+.guide-meta span {
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #788879;
+}
+
+.guide-info h3 {
+  margin: 0 0 12px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.guide-info p {
+  margin: 0 0 22px;
+
+  font-size: 0.87rem;
+  line-height: 1.7;
+
+  color: #637277;
+}
+
+.guide-link {
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  color: #123b45;
+}
+
+/* =========================
+   GUIDES MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .guides {
+    padding: 80px 5%;
+  }
+
+  .guides-header {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 35px;
+  }
+
+  .guides-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-image {
+    height: 270px;
+  }
+}
+
+/* =========================
+   GUIDE DETAILS
+========================= */
+
+.guide-details {
+  min-height: 100vh;
+
+  background: #faf8f3;
+}
+
+.guide-details-image {
+  width: 100%;
+  height: 58vh;
+  min-height: 420px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.guide-article {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  padding: 70px 30px 110px;
+}
+
+.article-back {
+  display: inline-block;
+
+  margin-bottom: 55px;
+
+  font-size: 0.85rem;
+}
+
+.article-category {
+  margin: 0 0 15px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: #788879;
+}
+
+.guide-article h1 {
+  max-width: 800px;
+
+  margin: 0 0 20px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.article-meta {
+  display: flex;
+  gap: 20px;
+
+  margin-bottom: 35px;
+
+  font-size: 0.8rem;
+
+  color: #788879;
+}
+
+.article-intro {
+  max-width: 720px;
+
+  margin: 0 0 50px;
+
+  font-size: 1.15rem;
+  line-height: 1.8;
+
+  color: #53666a;
+}
+
+.article-body {
+  max-width: 720px;
+
+  font-size: 1rem;
+  line-height: 1.9;
+
+  color: #34494e;
+}
+
+.article-body h2 {
+  margin: 50px 0 15px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.3rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.article-body p {
+  margin: 0 0 25px;
+}
+
+@media (max-width: 800px) {
+  .guide-details-image {
+    height: 45vh;
+    min-height: 320px;
+  }
+
+  .guide-article {
+    padding: 55px 6% 80px;
+  }
+
+  .article-back {
+    margin-bottom: 40px;
+  }
+
+  .guide-article h1 {
+    font-size: 3rem;
+  }
+
+  .article-intro {
+    font-size: 1rem;
+  }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  background: #123b45;
+  color: #ffffff;
+
+  padding: 80px 6% 30px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+
+  gap: 60px;
+
+  padding-bottom: 70px;
+}
+
+.footer-brand {
+  max-width: 360px;
+}
+
+.footer-logo {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+.footer-brand p {
+  margin: 0;
+
+  font-size: 0.9rem;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.footer-column h3 {
+  margin: 0 0 10px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-column a {
+  width: fit-content;
+
+  font-size: 0.85rem;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+
+  transform: translateX(3px);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  font-size: 0.72rem;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================
+   FOOTER MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .footer {
+    padding: 65px 5% 25px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px 30px;
+
+    padding-bottom: 50px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+}
+
+/* =========================
+   RESORT DETAILS
+========================= */
+
+.resort-details {
+  background: #faf8f3;
+  min-height: 100vh;
+}
+
+/* HERO */
+
+.resort-hero {
+  min-height: 70vh;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+.resort-hero-overlay {
+  min-height: 70vh;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 7%;
+
+  background: linear-gradient(
+    to top,
+    rgba(10, 28, 33, 0.85),
+    rgba(10, 28, 33, 0.08)
+  );
+}
+
+.resort-hero-content {
+  color: #ffffff;
+}
+
+.resort-back {
+  display: inline-block;
+
+  margin-bottom: 40px;
+
+  font-size: 0.8rem;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.resort-category {
+  margin: 0 0 12px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.resort-hero h1 {
+  margin: 0;
+
+  max-width: 850px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(3.5rem, 8vw, 7rem);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+.resort-location {
+  margin: 20px 0 0;
+
+  font-size: 0.95rem;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* OVERVIEW */
+
+.resort-overview {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-bottom: 1px solid #e7e2d8;
+
+  background: #ffffff;
+}
+
+.resort-overview > div {
+  padding: 30px 6%;
+
+  border-right: 1px solid #e7e2d8;
+}
+
+.resort-overview > div:last-child {
+  border-right: none;
+}
+
+.resort-rating,
+.resort-price,
+.resort-region {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.resort-rating {
+  flex-direction: row;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.rating-star {
+  font-size: 1.1rem;
+}
+
+.resort-overview span {
+  font-size: 0.7rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.12em;
+
+  color: #788879;
+}
+
+.resort-overview strong {
+  font-size: 0.95rem;
+
+  color: #183f49;
+}
+
+/* CONTENT */
+
+.resort-content {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 110px 6%;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 340px;
+
+  gap: 100px;
+}
+
+.resort-main h2 {
+  max-width: 700px;
+
+  margin: 0 0 30px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(2.8rem, 5vw, 5rem);
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.resort-main h2 span {
+  font-style: italic;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  color: #788879;
+}
+
+.resort-description {
+  max-width: 700px;
+
+  margin: 0;
+
+  font-size: 1.1rem;
+
+  line-height: 1.9;
+
+  color: #53666a;
+}
+
+/* SECTIONS */
+
+.resort-section {
+  margin-top: 90px;
+
+  padding-top: 45px;
+
+  border-top: 1px solid #e5e0d7;
+}
+
+/* HIGHLIGHTS */
+
+.highlight-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 0;
+
+  border-top: 1px solid #e5e0d7;
+}
+
+.highlight-item {
+  display: grid;
+
+  grid-template-columns: 50px 1fr;
+
+  gap: 15px;
+
+  padding: 25px 15px 25px 0;
+
+  border-bottom: 1px solid #e5e0d7;
+}
+
+.highlight-item span {
+  font-size: 0.7rem;
+
+  color: #9a9f97;
+}
+
+.highlight-item p {
+  margin: 0;
+
+  font-size: 0.95rem;
+
+  color: #34494e;
+}
+
+/* FEATURES */
+
+.features-list {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.feature-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px 0;
+}
+
+.feature-item span {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #cbd3cb;
+
+  border-radius: 50%;
+
+  font-size: 0.7rem;
+}
+
+.feature-item p {
+  margin: 0;
+
+  font-size: 0.9rem;
+}
+
+/* BEST FOR */
+
+.best-for-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.best-for-list span {
+  padding: 10px 16px;
+
+  border: 1px solid #d9d5cc;
+
+  border-radius: 50px;
+
+  font-size: 0.78rem;
+
+  color: #53666a;
+}
+
+/* SIDEBAR */
+
+.stay-card {
+  position: sticky;
+
+  top: 30px;
+
+  padding: 35px;
+
+  background: #123b45;
+
+  color: #ffffff;
+}
+
+.stay-card .eyebrow {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.stay-card h3 {
+  margin: 0 0 20px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 2.2rem;
+
+  font-weight: 400;
+
+  line-height: 1.05;
+}
+
+.stay-card > p:not(.eyebrow) {
+  margin: 0 0 28px;
+
+  font-size: 0.87rem;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.stay-button {
+  display: block;
+
+  padding: 15px 20px;
+
+  background: #ffffff;
+
+  text-align: center;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  color: #123b45;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.stay-button:hover {
+  transform: translateY(-2px);
+
+  background: #f2eee5;
+}
+
+.stay-note {
+  display: block;
+
+  margin-top: 15px;
+
+  font-size: 0.65rem;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .resort-hero,
+  .resort-hero-overlay {
+    min-height: 65vh;
+  }
+
+  .resort-hero-overlay {
+    padding: 8% 5%;
+  }
+
+  .resort-hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .resort-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .resort-overview > div {
+    border-right: none;
+
+    border-bottom: 1px solid #e7e2d8;
+  }
+
+  .resort-content {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+
+    padding: 75px 5%;
+  }
+
+  .highlight-grid,
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+
+  .stay-card {
+    position: static;
+  }
+}
+
+/* =========================
+   SEARCH RESULTS
+========================= */
+
+.search-results {
+  min-height: 100vh;
+
+  background: #faf8f3;
+}
+
+/* HEADER */
+
+.search-results-header {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 140px 6% 70px;
+}
+
+.results-back {
+  display: inline-block;
+
+  margin-bottom: 60px;
+
+  font-size: 0.8rem;
+
+  color: #53666a;
+}
+
+.results-eyebrow {
+  margin: 0 0 15px;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  color: #788879;
+}
+
+.search-results-header h1 {
+  max-width: 800px;
+
+  margin: 0 0 25px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(3.2rem, 7vw, 6rem);
+
+  font-weight: 400;
+
+  line-height: 0.98;
+
+  color: #123b45;
+}
+
+/* SUMMARY */
+
+.results-summary {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.results-summary span {
+  padding: 9px 15px;
+
+  border: 1px solid #ddd8cf;
+
+  border-radius: 50px;
+
+  font-size: 0.72rem;
+
+  color: #637277;
+}
+
+/* RESULTS CONTAINER */
+
+.results-container {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 6% 120px;
+}
+
+/* GRID */
+
+.results-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 35px;
+}
+
+/* CARD */
+
+.result-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e7e2d8;
+}
+
+.result-image-link {
+  display: block;
+
+  overflow: hidden;
+}
+
+.result-image {
+  height: 400px;
+
+  background-position: center;
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  transition: transform 0.6s ease;
+}
+
+.result-image-link:hover .result-image {
+  transform: scale(1.04);
+}
+
+/* INFO */
+
+.result-info {
+  padding: 28px;
+}
+
+.result-category {
+  margin: 0 0 10px;
+
+  font-size: 0.65rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+
+  color: #788879;
+}
+
+.result-info h2 {
+  margin: 0 0 8px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 2rem;
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  color: #123b45;
+}
+
+.result-location {
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-size: 0.82rem;
+
+  color: #788879;
+}
+
+/* DETAILS */
+
+.result-details {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 15px 0;
+
+  margin-bottom: 15px;
+
+  border-top: 1px solid #e7e2d8;
+
+  border-bottom: 1px solid #e7e2d8;
+
+  font-size: 0.78rem;
+
+  color: #53666a;
+}
+
+/* LINK */
+
+.result-link {
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  color: #123b45;
+}
+
+/* EMPTY STATE */
+
+.no-results {
+  max-width: 650px;
+
+  margin: 80px auto;
+
+  padding: 70px 40px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e7e2d8;
+}
+
+.no-results h2 {
+  margin: 0 0 18px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 3rem;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.no-results > p:not(.results-eyebrow) {
+  margin: 0 auto 30px;
+
+  max-width: 450px;
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+
+  color: #637277;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .search-results-header {
+    padding: 100px 5% 50px;
+  }
+
+  .results-back {
+    margin-bottom: 45px;
+  }
+
+  .search-results-header h1 {
+    font-size: 3.3rem;
+  }
+
+  .results-container {
+    padding: 0 5% 80px;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .result-image {
+    height: 300px;
+  }
+
+  .result-info {
+    padding: 23px;
+  }
+
+  .result-info h2 {
+    font-size: 1.7rem;
+  }
+
+  .no-results {
+    padding: 50px 25px;
+  }
+
+  .no-results h2 {
+    font-size: 2.4rem;
+  }
+}
+
+/* =========================
+   TRAVEL ARTICLE
+========================= */
+
+.article-section {
+  margin-bottom: 60px;
+}
+
+.article-section h2 {
+  margin: 0 0 18px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 2.3rem;
+
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  color: #123b45;
+}
+
+.article-section p {
+  margin-bottom: 22px;
+}
+
+.article-end {
+  margin-top: 90px;
+
+  padding-top: 60px;
+
+  border-top: 1px solid #e5e0d7;
+}
+
+.article-end h2 {
+  max-width: 600px;
+
+  margin: 0 0 30px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 3.5rem;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+@media (max-width: 800px) {
+  .article-section h2 {
+    font-size: 1.9rem;
+  }
+
+  .article-end {
+    margin-top: 60px;
+
+    padding-top: 40px;
+  }
+
+  .article-end h2 {
+    font-size: 2.7rem;
+  }
+}
+
+/* =========================
+   DESTINATION DETAILS
+========================= */
+
+.destination-details {
+  min-height: 100vh;
+  background: #faf8f3;
+}
+
+/* HERO */
+
+.destination-hero {
+  min-height: 72vh;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.destination-hero-overlay {
+  min-height: 72vh;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 7%;
+
+  background: linear-gradient(
+    to top,
+    rgba(10, 28, 33, 0.88),
+    rgba(10, 28, 33, 0.08)
+  );
+}
+
+.destination-hero-content {
+  max-width: 850px;
+  color: #ffffff;
+}
+
+.destination-back {
+  display: inline-block;
+
+  margin-bottom: 45px;
+
+  font-size: 0.8rem;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.destination-eyebrow {
+  margin: 0 0 12px;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.destination-hero h1 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(4rem, 9vw, 8rem);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+}
+
+.destination-hero-content > p:last-child {
+  max-width: 600px;
+
+  margin: 25px 0 0;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* INTRO */
+
+.destination-intro {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 120px 6%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 100px;
+
+  align-items: end;
+}
+
+.destination-intro h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  color: #123b45;
+}
+
+.destination-intro h2 span {
+  display: block;
+
+  font-style: italic;
+}
+
+.destination-intro > p {
+  margin: 0;
+
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+
+  color: #53666a;
+}
+
+/* SHARED SECTION */
+
+.destination-section {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 70px 6%;
+
+  border-top: 1px solid #e5e0d7;
+}
+
+/* TAGS */
+
+.destination-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.destination-tags span {
+  padding: 12px 20px;
+
+  border: 1px solid #d8d3ca;
+
+  border-radius: 50px;
+
+  font-size: 0.78rem;
+
+  color: #53666a;
+}
+
+/* HIGHLIGHTS */
+
+.destination-highlights {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid #e5e0d7;
+}
+
+.destination-highlight {
+  min-height: 180px;
+
+  padding: 25px 25px 25px 0;
+
+  border-bottom: 1px solid #e5e0d7;
+}
+
+.destination-highlight:not(:nth-child(3n)) {
+  border-right: 1px solid #e5e0d7;
+
+  padding-right: 25px;
+}
+
+.destination-highlight span {
+  display: block;
+
+  margin-bottom: 35px;
+
+  font-size: 0.68rem;
+
+  color: #9a9f97;
+}
+
+.destination-highlight h3 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 1.55rem;
+
+  font-weight: 400;
+
+  color: #123b45;
+}
+
+/* TRAVEL TIPS */
+
+.destination-tips {
+  max-width: 1200px;
+
+  margin: 70px auto;
+
+  padding: 80px 6%;
+
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 100px;
+
+  background: #123b45;
+
+  color: #ffffff;
+}
+
+.destination-tips .eyebrow {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.destination-tips h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+.destination-tips h2 span {
+  display: block;
+
+  font-style: italic;
+}
+
+.tips-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.tip {
+  display: grid;
+
+  grid-template-columns: 45px 1fr;
+
+  gap: 20px;
+
+  padding: 25px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.tip span {
+  font-size: 0.7rem;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.tip p {
+  margin: 0;
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* RESORTS */
+
+.destination-resorts {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 80px 6% 120px;
+}
+
+.destination-resorts-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: end;
+
+  gap: 30px;
+
+  margin-bottom: 50px;
+}
+
+.destination-resorts-heading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  color: #123b45;
+}
+
+.destination-resorts-heading h2 span {
+  font-style: italic;
+}
+
+.destination-resorts-heading > a {
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  color: #123b45;
+}
+
+.destination-resort-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+.destination-resort-card {
+  display: block;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e0d7;
+}
+
+.destination-resort-image {
+  height: 330px;
+
+  background-position: center;
+
+  background-size: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.destination-resort-card:hover .destination-resort-image {
+  transform: scale(1.04);
+}
+
+.destination-resort-card > div:last-child {
+  padding: 25px;
+}
+
+.destination-resort-card p {
+  margin: 0 0 8px;
+
+  font-size: 0.65rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+
+  color: #788879;
+}
+
+.destination-resort-card h3 {
+  margin: 0 0 18px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 1.8rem;
+
+  font-weight: 400;
+
+  color: #123b45;
+}
+
+.destination-resort-card span {
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  color: #53666a;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .destination-hero,
+  .destination-hero-overlay {
+    min-height: 65vh;
+  }
+
+  .destination-hero-overlay {
+    padding: 8% 5%;
+  }
+
+  .destination-hero h1 {
+    font-size: 4.2rem;
+  }
+
+  .destination-intro {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding: 80px 5%;
+  }
+
+  .destination-section {
+    padding: 55px 5%;
+  }
+
+  .destination-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-highlight {
+    border-right: none !important;
+
+    padding-right: 0 !important;
+  }
+
+  .destination-tips {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    margin: 40px 5%;
+
+    padding: 55px 7%;
+  }
+
+  .destination-resorts {
+    padding: 60px 5% 80px;
+  }
+
+  .destination-resorts-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .destination-resort-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-resort-image {
+    height: 280px;
+  }
+}
+
+/* =========================
+   FINAL MOBILE POLISH
+========================= */
+
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    position: absolute;
+    height: 72px;
+    padding: 0 5%;
+  }
+
+  .logo {
+    font-size: 1.15rem;
+  }
+
+  .nav-button {
+    padding: 0.65rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 110px 7% 70px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 14vw, 4.5rem);
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .search-section {
+    position: relative;
+    z-index: 2;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .search-field select {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .destination-image {
+    min-height: 330px;
+  }
+
+  .resort-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .resort-image {
+    height: 330px;
+  }
+
+  .experiences-header,
+  .guides-header {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-grid,
+  .guides-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-image {
+    min-height: 380px;
+  }
+
+  .guide-image {
+    height: 260px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 480px) {
+  .hero {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .section-heading h2 {
+    font-size: 2.6rem;
+  }
+
+  .destination-image {
+    min-height: 300px;
+  }
+
+  .resort-image {
+    height: 280px;
+  }
+
+  .experience-image {
+    min-height: 340px;
+  }
+
+  .search-results-header h1 {
+    font-size: 2.5rem;
+  }
+}

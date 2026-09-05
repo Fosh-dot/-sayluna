@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://YOUR-DOMAIN.netlify.app/</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.netlify.app/search</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.netlify.app/resorts/shangri-la-boracay</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.netlify.app/resorts/el-nido-resorts</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.netlify.app/resorts/crimson-resort-cebu</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.netlify.app/resorts/nay-palad-hideaway</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.netlify.app/resorts/the-bellevue-resort-bohol</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.netlify.app/guides/best-time-to-visit-palawan</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.netlify.app/guides/things-to-do-in-siargao</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.netlify.app/guides/boracay-first-time-guide</loc>
+  </url>
+
+</urlset>

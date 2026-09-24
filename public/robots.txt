@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-DOMAIN.netlify.app/sitemap.xml
+Sitemap: https://sayluna.world/sitemap.xml

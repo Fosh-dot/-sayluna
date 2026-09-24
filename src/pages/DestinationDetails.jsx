@@ -1,5 +1,4 @@
 import { Link, useParams } from "react-router-dom";
-
 import destinationDetails from "../data/destinationDetails";
 import SEO from "../components/SEO";
 import resorts from "../data/resorts";
@@ -13,7 +12,6 @@ function DestinationDetails() {
     return (
       <main className="not-found">
         <h1>Destination not found</h1>
-
         <p>We couldn't find the destination you're looking for.</p>
 
         <Link to="/" className="primary-button">
@@ -37,7 +35,6 @@ function DestinationDetails() {
       />
 
       {/* HERO */}
-
       <section
         className="destination-hero"
         style={{
@@ -60,14 +57,13 @@ function DestinationDetails() {
       </section>
 
       {/* INTRO */}
-
       <section className="destination-intro">
         <div>
           <p className="eyebrow">DISCOVER {destination.name.toUpperCase()}</p>
 
           <h2>
             Your guide to
-            <span> the island.</span>
+            <span> {destination.name}.</span>
           </h2>
         </div>
 
@@ -75,7 +71,6 @@ function DestinationDetails() {
       </section>
 
       {/* BEST FOR */}
-
       <section className="destination-section">
         <p className="eyebrow">BEST FOR</p>
 
@@ -87,14 +82,13 @@ function DestinationDetails() {
       </section>
 
       {/* HIGHLIGHTS */}
-
       <section className="destination-section">
         <p className="eyebrow">DON'T MISS</p>
 
         <div className="destination-highlights">
           {destination.highlights.map((item, index) => (
             <div className="destination-highlight" key={index}>
-              <span>0{index + 1}</span>
+              <span>{String(index + 1).padStart(2, "0")}</span>
 
               <h3>{item}</h3>
             </div>
@@ -102,8 +96,37 @@ function DestinationDetails() {
         </div>
       </section>
 
-      {/* TRAVEL TIPS */}
+      {/* DETAILED GUIDE CONTENT */}
+      <section className="destination-guide-content">
+        <div className="destination-guide-heading">
+          <p className="eyebrow">THE SAYLUNA GUIDE</p>
 
+          <h2>
+            Everything you need to know about
+            <span> {destination.name}.</span>
+          </h2>
+        </div>
+
+        <div className="destination-guide-sections">
+          {destination.sections.map((section, index) => (
+            <article className="destination-guide-section" key={index}>
+              <span className="guide-section-number">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              <div>
+                <h3>{section.heading}</h3>
+
+                {section.paragraphs.map((paragraph, paragraphIndex) => (
+                  <p key={paragraphIndex}>{paragraph}</p>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* TRAVEL TIPS */}
       <section className="destination-tips">
         <div>
           <p className="eyebrow">BEFORE YOU GO</p>
@@ -126,7 +149,6 @@ function DestinationDetails() {
       </section>
 
       {/* RESORTS */}
-
       {destinationResorts.length > 0 && (
         <section className="destination-resorts">
           <div className="destination-resorts-heading">
@@ -168,6 +190,46 @@ function DestinationDetails() {
           </div>
         </section>
       )}
+
+      {/* FAQ */}
+      <section className="destination-faq">
+        <div className="destination-faq-heading">
+          <p className="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
+
+          <h2>
+            Planning your
+            <span> {destination.name} trip?</span>
+          </h2>
+        </div>
+
+        <div className="destination-faq-list">
+          {destination.faqs.map((faq, index) => (
+            <article className="destination-faq-item" key={index}>
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="destination-final">
+        <p className="eyebrow">KEEP EXPLORING</p>
+
+        <h2>
+          Your next escape
+          <span> is waiting.</span>
+        </h2>
+
+        <p>
+          Explore more destinations, stays, experiences, and travel guides with
+          SAYLUNA.
+        </p>
+
+        <Link to="/" className="primary-button">
+          Explore SAYLUNA
+        </Link>
+      </section>
     </main>
   );
 }

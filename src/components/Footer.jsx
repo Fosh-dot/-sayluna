@@ -4,6 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-main">
+        {/* BRAND */}
         <div className="footer-brand">
           <Link to="/" className="footer-logo">
             SAYLUNA
@@ -15,18 +16,17 @@ function Footer() {
           </p>
         </div>
 
+        {/* EXPLORE */}
         <div className="footer-column">
           <h3>Explore</h3>
 
           <a href="/#destinations">Destinations</a>
-
           <a href="/#resorts">Resorts</a>
-
           <a href="/#experiences">Experiences</a>
-
           <a href="/#guides">Travel Journal</a>
         </div>
 
+        {/* DISCOVER */}
         <div className="footer-column">
           <h3>Discover</h3>
 
@@ -39,21 +39,25 @@ function Footer() {
           <Link to="/search?destination=Siargao&type=Resort">Siargao</Link>
         </div>
 
+        {/* SAYLUNA */}
         <div className="footer-column">
           <h3>SAYLUNA</h3>
 
+          <Link to="/about">About SAYLUNA</Link>
           <a href="/#guides">Our Journal</a>
-
           <a href="/#experiences">Experiences</a>
-
           <a href="/#resorts">Find a Resort</a>
-
-          <a href="/#destinations">Destinations</a>
+          <Link to="/contact">Contact Us</Link>
         </div>
       </div>
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} SAYLUNA. All rights reserved.</p>
+
+        <div className="footer-legal">
+          <Link to="/privacy">Privacy Policy</Link>
+          <Link to="/terms">Terms of Use</Link>
+        </div>
 
         <p>Your world of beautiful escapes.</p>
       </div>

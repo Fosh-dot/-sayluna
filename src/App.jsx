@@ -15,6 +15,13 @@ import SearchResults from "./pages/SearchResults";
 import GuideDetails from "./pages/GuideDetails";
 import SEO from "./components/SEO";
 import DestinationDetails from "./pages/DestinationDetails";
+import WhySayluna from "./components/WhySayluna";
+import TravelPlanning from "./components/TravelPlanning";
+import HomeFAQ from "./components/HomeFAQ";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 function ScrollToTop() {
   const { pathname, search } = useLocation();
@@ -42,11 +49,16 @@ function HomePage() {
 
         <Destinations />
 
+        <WhySayluna />
+
         <Resorts />
 
         <Experiences />
 
+        <TravelPlanning />
+
         <Guides />
+        <HomeFAQ />
       </main>
 
       <Footer />
@@ -99,7 +111,11 @@ function App() {
 
         <Route path="/" element={<HomePage />} />
 
-        {/* RESORT */}
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy" element={<Privacy />} />
+
+        <Route path="/terms" element={<Terms />} />
 
         <Route path="/resorts/:slug" element={<ResortPage />} />
 

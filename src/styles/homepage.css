@@ -4447,3 +4447,294 @@
     flex-direction: column;
   }
 }
+/* =========================
+   NAVBAR POLISH
+========================= */
+
+.navbar {
+  z-index: 20;
+}
+
+.logo {
+  display: inline-block;
+  color: #ffffff;
+  cursor: pointer;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.nav-links button {
+  position: relative;
+
+  padding: 8px 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-links button::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 1px;
+
+  background: #ffffff;
+
+  transition: width 0.3s ease;
+}
+
+.nav-links button:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.nav-links button:hover::after {
+  width: 100%;
+}
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+
+  padding: 0.7rem 1.35rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #123b45;
+
+  transform: translateY(-2px);
+}
+
+.nav-button:active {
+  transform: translateY(0);
+}
+
+/* POINTER CURSOR */
+
+a,
+button,
+select,
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1.15rem;
+  }
+
+  .nav-button {
+    min-height: 40px;
+    padding: 0.65rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+/* =========================
+   EXPERIENCE CARD DESCRIPTION
+========================= */
+
+.experience-overlay .experience-description {
+  max-width: 320px;
+  margin: 0 0 20px;
+
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0;
+  text-transform: none;
+
+  color: rgba(255, 255, 255, 0.88);
+  opacity: 1;
+}
+/* =========================
+   RESORT CARD POLISH
+========================= */
+
+.resort-card {
+  min-width: 0;
+}
+
+.resort-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.resort-image {
+  position: relative;
+  height: 360px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transition: transform 0.4s ease;
+}
+
+.resort-card:hover .resort-image {
+  transform: translateY(-5px);
+}
+
+.resort-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 28px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    to top,
+    rgba(10, 28, 33, 0.92) 0%,
+    rgba(10, 28, 33, 0.62) 38%,
+    rgba(10, 28, 33, 0.05) 75%
+  );
+}
+
+.resort-card-content {
+  width: 100%;
+  max-width: 430px;
+}
+
+.resort-location {
+  margin: 0 0 8px;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.resort-card-content h3 {
+  margin: 0 0 12px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.05;
+
+  color: #ffffff;
+}
+
+.resort-card-content .resort-description {
+  margin: 0 0 18px;
+
+  font-size: 0.86rem;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0;
+  text-transform: none;
+
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.resort-explore {
+  display: inline-block;
+
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+
+  color: #ffffff;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.resort-card:hover .resort-explore {
+  transform: translateX(5px);
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .resort-image {
+    height: 340px;
+  }
+
+  .resort-overlay {
+    padding: 24px;
+  }
+
+  .resort-card-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .resort-card-content .resort-description {
+    font-size: 0.84rem;
+  }
+}

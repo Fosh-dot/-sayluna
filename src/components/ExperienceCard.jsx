@@ -20,14 +20,14 @@ function ExperienceCard({ experience }) {
 
           <span>{experience.location}</span>
 
-          <p className="experience-description">{experience.description}</p>
+          <p className="experience-description">
+            {experience.description}
+          </p>
 
-          {experience.guideSlug ? (
-            <Link to={`/guides/${experience.guideSlug}`}>
+          {experience.slug && (
+            <Link to={`/experiences/${experience.slug}`}>
               Explore experience →
             </Link>
-          ) : (
-            <span className="experience-coming-soon">Guide coming soon</span>
           )}
         </div>
       </div>

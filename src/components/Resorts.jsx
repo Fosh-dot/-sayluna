@@ -6,19 +6,27 @@ function Resorts() {
     <section className="resorts" id="resorts">
       <div className="resorts-header">
         <div className="section-heading">
-          <p>CURATED STAYS</p>
+          <p>STAY SOMEWHERE SPECIAL</p>
 
-          <h2>Stay somewhere unforgettable.</h2>
+          <h2>
+            Places worth
+            <span> staying for.</span>
+          </h2>
         </div>
 
-        <a href="#resorts" className="view-all">
-          View all resorts →
-        </a>
+        <p className="resorts-intro">
+          Discover carefully selected resorts across the Philippines, from
+          beachfront escapes and island hideaways to relaxing stays designed
+          for unforgettable journeys.
+        </p>
       </div>
 
       <div className="resort-grid">
         {resorts.map((resort) => (
-          <ResortCard key={resort.id} resort={resort} />
+          <ResortCard
+            key={resort.id}
+            resort={resort}
+          />
         ))}
       </div>
     </section>

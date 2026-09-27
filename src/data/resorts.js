@@ -9,8 +9,6 @@ const resorts = [
     location: "Yapak, Boracay, Aklan",
     region: "Western Visayas",
     category: "Luxury Resort",
-    rating: 4.8,
-    ratingLabel: "Guest rating",
     priceLevel: "Luxury",
 
     description:
@@ -18,7 +16,8 @@ const resorts = [
 
     image: shangriLaBoracay,
 
-    officialWebsite: "https://www.shangri-la.com/boracay/boracayresort/",
+    officialWebsite:
+      "https://www.shangri-la.com/boracay/boracayresort/",
 
     overview: [
       "Shangri-La Boracay offers a quieter side of the island, surrounded by tropical greenery and coastal scenery. Its location in Yapak places the resort away from the busiest parts of White Beach while keeping Boracay's attractions within reach.",
@@ -38,7 +37,12 @@ const resorts = [
       "Luxury villas",
     ],
 
-    bestFor: ["Luxury escapes", "Couples", "Families", "Special occasions"],
+    bestFor: [
+      "Luxury escapes",
+      "Couples",
+      "Families",
+      "Special occasions",
+    ],
 
     highlights: [
       "Secluded northern coastline",
@@ -91,8 +95,6 @@ const resorts = [
     location: "Palawan",
     region: "MIMAROPA",
     category: "Island Resort",
-    rating: 4.7,
-    ratingLabel: "Guest rating",
     priceLevel: "Luxury",
 
     description:
@@ -178,14 +180,13 @@ const resorts = [
     location: "Mactan, Cebu",
     region: "Central Visayas",
     category: "Beach Resort",
-    rating: 4.6,
-    ratingLabel: "Guest rating",
     priceLevel: "Premium",
 
     description:
       "A modern coastal retreat in Mactan offering a private beach, infinity pool, wellness facilities, dining, and tropical surroundings.",
 
-    image: "https://images.unsplash.com/photo-1602002418082-a4443e081dd1",
+    image:
+      "https://images.unsplash.com/photo-1602002418082-a4443e081dd1",
 
     officialWebsite: "https://www.crimsonhotel.com/cebu/",
 
@@ -207,7 +208,12 @@ const resorts = [
       "Fitness centre",
     ],
 
-    bestFor: ["Couples", "Families", "Relaxation", "Weekend escapes"],
+    bestFor: [
+      "Couples",
+      "Families",
+      "Relaxation",
+      "Weekend escapes",
+    ],
 
     highlights: [
       "Private beach",
@@ -260,14 +266,13 @@ const resorts = [
     location: "Malinao, Siargao",
     region: "Surigao del Norte",
     category: "Private Island",
-    rating: 4.9,
-    ratingLabel: "Guest rating",
     priceLevel: "Ultra Luxury",
 
     description:
       "A secluded Siargao hideaway between a private white-sand beach and ancient mangrove forests, built around personalized barefoot luxury.",
 
-    image: "https://images.unsplash.com/photo-1540541338287-41700207dee6",
+    image:
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6",
 
     officialWebsite: "https://naypaladhideaway.com/",
 
@@ -347,14 +352,13 @@ const resorts = [
     location: "Doljo, Panglao, Bohol",
     region: "Central Visayas",
     category: "Luxury Resort",
-    rating: 4.7,
-    ratingLabel: "Guest rating",
     priceLevel: "Luxury",
 
     description:
       "A luxury beachfront sanctuary in Panglao offering a peaceful coastal setting, spacious accommodation, dining, and easy access to Bohol's natural attractions.",
 
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+    image:
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945",
 
     officialWebsite: "https://www.thebellevuebohol.com/",
 
@@ -376,7 +380,12 @@ const resorts = [
       "Ocean views",
     ],
 
-    bestFor: ["Luxury escapes", "Couples", "Families", "Relaxation"],
+    bestFor: [
+      "Luxury escapes",
+      "Couples",
+      "Families",
+      "Relaxation",
+    ],
 
     highlights: [
       "Doljo Beach",

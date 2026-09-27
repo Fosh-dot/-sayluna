@@ -3,38 +3,35 @@ import { Link } from "react-router-dom";
 function ResortCard({ resort }) {
   return (
     <article className="resort-card">
-      <div
-        className="resort-image"
-        style={{
-          backgroundImage: `url(${resort.image})`,
-        }}
+      <Link
+        to={`/resorts/${resort.slug}`}
+        className="resort-card-link"
       >
-        <span className="resort-category">{resort.category}</span>
+        <div
+          className="resort-image"
+          style={{
+            backgroundImage: `url(${resort.image})`,
+          }}
+        >
+          <div className="resort-overlay">
+            <div className="resort-card-content">
+              <p className="resort-location">
+                {resort.location}
+              </p>
 
-        <button className="favorite-button" aria-label={`Save ${resort.name}`}>
-          ♡
-        </button>
-      </div>
+              <h3>{resort.name}</h3>
 
-      <div className="resort-info">
-        <div className="resort-heading">
-          <div>
-            <h3>{resort.name}</h3>
+              <p className="resort-description">
+                {resort.description}
+              </p>
 
-            <p>{resort.location}</p>
+              <span className="resort-explore">
+                Explore resort →
+              </span>
+            </div>
           </div>
-
-          <span className="resort-rating">★ {resort.rating}</span>
         </div>
-
-        <div className="resort-bottom">
-          <span>{resort.priceLevel}</span>
-
-          <Link to={`/resorts/${resort.slug}`} className="view-resort">
-            View Resort →
-          </Link>
-        </div>
-      </div>
+      </Link>
     </article>
   );
 }

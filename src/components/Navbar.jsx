@@ -1,20 +1,39 @@
+import { Link, useLocation } from "react-router-dom";
+
 function Navbar() {
+  const location = useLocation();
+
+  const goToSection = (section) => {
+    if (location.pathname === "/") {
+      document.getElementById(section)?.scrollIntoView({
+        behavior: "smooth",
+      });
+    } else {
+      window.location.href = `/#${section}`;
+    }
+  };
+
   return (
     <header className="navbar">
-      <a href="/" className="logo">
+      <Link to="/" className="logo">
         SAYLUNA
-      </a>
+      </Link>
 
       <nav className="nav-links">
-        <a href="#destinations">Destinations</a>
-        <a href="#resorts">Resorts</a>
-        <a href="#experiences">Experiences</a>
-        <a href="#guides">Guides</a>
+        <button onClick={() => goToSection("destinations")}>
+          Destinations
+        </button>
+
+        <button onClick={() => goToSection("resorts")}>Resorts</button>
+
+        <button onClick={() => goToSection("experiences")}>Experiences</button>
+
+        <button onClick={() => goToSection("guides")}>Guides</button>
       </nav>
 
-      <a href="#resorts" className="nav-button">
+      <button onClick={() => goToSection("resorts")} className="nav-button">
         Explore
-      </a>
+      </button>
     </header>
   );
 }

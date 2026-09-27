@@ -20,6 +20,8 @@ function ExperienceCard({ experience }) {
 
           <span>{experience.location}</span>
 
+          <p className="experience-description">{experience.description}</p>
+
           {experience.guideSlug ? (
             <Link to={`/guides/${experience.guideSlug}`}>
               Explore experience →

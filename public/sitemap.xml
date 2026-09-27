@@ -6,7 +6,39 @@
   </url>
 
   <url>
-    <loc>https://sayluna.world/search</loc>
+    <loc>https://sayluna.world/about</loc>
+  </url>
+
+  <url>
+    <loc>https://sayluna.world/contact</loc>
+  </url>
+
+  <url>
+    <loc>https://sayluna.world/privacy</loc>
+  </url>
+
+  <url>
+    <loc>https://sayluna.world/terms</loc>
+  </url>
+
+  <url>
+    <loc>https://sayluna.world/destinations/boracay</loc>
+  </url>
+
+  <url>
+    <loc>https://sayluna.world/destinations/palawan</loc>
+  </url>
+
+  <url>
+    <loc>https://sayluna.world/destinations/cebu</loc>
+  </url>
+
+  <url>
+    <loc>https://sayluna.world/destinations/siargao</loc>
+  </url>
+
+  <url>
+    <loc>https://sayluna.world/destinations/bohol</loc>
   </url>
 
   <url>
@@ -42,9 +74,3 @@
   </url>
 
 </urlset>
-
-https://sayluna.world/destinations/boracay
-https://sayluna.world/destinations/palawan
-https://sayluna.world/destinations/cebu
-https://sayluna.world/destinations/siargao
-https://sayluna.world/destinations/bohol
